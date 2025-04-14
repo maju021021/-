@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سایت شخصی من</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon websie" href="image/بلوچستان.webp">
+  <style>
+    /* From Uiverse.io by TimTrayler */ 
+.searchbar {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  z-index: 3;
+  height: 44px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 0 auto;
+  width: auto;
+  max-width: 224px;
+}
+
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-left {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-icon-wrapper {
+  margin: auto;
+}
+
+.search-icon {
+  margin-top: 3px;
+  color: #9aa0a6;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.searchbar-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, .87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.searchbar-right {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  align-items: stretch;
+  flex-direction: row
+}
+
+.searchbar-clear-icon {
+  margin-right: 12px
+}
+
+.voice-search {
+  flex: 1 0 auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0 8px;
+  width: 2.8em;
+}
+    /* From Uiverse.io by faxriddin20 */ 
+.telegram {
+  transition: none 0.5s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 130px;
+  height: 50px;
+  gap: 10px;
+  border: none;
+  background-color: rgb(42 171 238);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.telegram-text {
+  transition: none 0.3s ease;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.telegram:hover .telegram-text {
+  display: none;
+  position: absolute;
+}
+
+.telegram-svg {
+  width: 23px;
+  height: 23px;
+  transition: 0.8s;
+}
+
+.telegram:hover .telegram-svg {
+  margin-left: 40px;
+  display: block;
+  transform: rotate(50deg);
+}
+
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f0f0f0;
+      --link-color: #0a0b0c;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --link-color: #66ccff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .theme-toggle {
+      margin-top: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--link-color);
+      padding: 0.5rem;
+      transition: transform 0.3s;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    .card p,
+    .card li,
+    .card a {
+      font-size: 1rem;
+    }
+    p{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body data-theme="light">
+  
+  <p>جستجو کن و مثل من دنبال یادگیری باش💕</p>
+  <!-- From Uiverse.io by TimTrayler --> 
+<div class="searchbar">
+  <div class="searchbar-wrapper">
+      <div class="searchbar-left">
+          <div class="search-icon-wrapper">
+              <span class="search-icon searchbar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                      </path>
+                  </svg>
+              </span>
+          </div>
+      </div>
+
+      <div class="searchbar-center">
+          <div class="searchbar-input-spacer"></div>
+
+          <input type="text" class="searchbar-input" maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Search Google">
+      </div>
+
+      <div class="searchbar-right">
+          <svg class="voice-search" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z">
+              </path>
+              <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+              <path fill="#fbbc05" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z">
+              </path>
+              <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z">
+              </path>
+          </svg>
+      </div>
+  </div>
+</div>
+  <header>
+    <h1>سلام! من کارآموز برنامه‌نویسی وب هستم 🌐</h1>
+    <p>در حال یادگیری HTML, CSS, JavaScript و طراحی واکنش‌گرا</p>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2><i class="fas fa-user"></i> درباره من</h2>
+      <p>من ماجد هستم برنامه نویس وب </p>
+      <p>به زبان های پایه برنامه نویسی وب مسلط هستم و درحال یادگیری هستم برای اشنا شدن بیشتر با من در گروه تلگرامی من عضو شو</p>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-laptop-code"></i> مهارت‌ها</h2>
+      <ul>
+        <li>HTML5, CSS3</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>python</li>
+        <li>java</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-code"></i> پروژه‌ها</h2>
+      <ul>
+        <li><a href="#">سایت شخصی ساده</a></li>
+        <li><a href="#">اپلیکیشن لیست کارها</a></li>
+        <li><a href="#">وبلاگ واکنش‌گرا</a></li>
+        <li><a href="#">فرم تماس با اعتبارسنجی</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-blog"></i> مقالات من</h2>
+      <ul>
+        <li><a href="#">۵ نکته برای یادگیری بهتر برنامه‌نویسی</a></li>
+        <li><a href="#">چگونه Git و GitHub را حرفه‌ای یاد بگیریم؟</a></li>
+        <li><a href="#">فرق بین let و var در جاوااسکریپت</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-envelope"></i> تماس با من</h2>
+      <p>می‌تونی از طریق ایمیل <a href="majuhesam@gmail.com">majuhesam@gmail.com</a> با من در ارتباط باشی.</p>
+      <p>یا به من پیام بده در تلگرام</p>
+      <!-- From Uiverse.io by faxriddin20 --> 
+<button class="telegram">
+  <svg
+    style="fill:#FFFFFF;"
+    class="telegram-svg"
+    viewBox="0,0,256,256"
+    y="0px"
+    x="0px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      style="mix-blend-mode: normal"
+      text-anchor="none"
+      font-size="none"
+      font-weight="none"
+      font-family="none"
+      stroke-dashoffset="0"
+      stroke-dasharray=""
+      stroke-miterlimit="10"
+      stroke-linejoin="miter"
+      stroke-linecap="butt"
+      stroke-width="1"
+      stroke="none"
+      fill-rule="nonzero"
+      fill="#ffffff"
+    >
+      <g transform="scale(5.12,5.12)">
+        <path
+          d="M46.137,6.552c-0.75,-0.636 -1.928,-0.727 -3.146,-0.238h-0.002c-1.281,0.514 -36.261,15.518 -37.685,16.131c-0.259,0.09 -2.521,0.934 -2.288,2.814c0.208,1.695 2.026,2.397 2.248,2.478l8.893,3.045c0.59,1.964 2.765,9.21 3.246,10.758c0.3,0.965 0.789,2.233 1.646,2.494c0.752,0.29 1.5,0.025 1.984,-0.355l5.437,-5.043l8.777,6.845l0.209,0.125c0.596,0.264 1.167,0.396 1.712,0.396c0.421,0 0.825,-0.079 1.211,-0.237c1.315,-0.54 1.841,-1.793 1.896,-1.935l6.556,-34.077c0.4,-1.82 -0.156,-2.746 -0.694,-3.201zM22,32l-3,8l-3,-10l23,-17z"
+        ></path>
+      </g>
+    </g>
+  </svg>
+  <span class="telegram-text"></span>
+  <a href="https://t.me/maxmaxmaxmaxmaxvan">Telegram</a>
+</button>
+
+    </div>
+  </div>
+  
+  
+
+  <footer>
+    © 2025 ساخته‌شده با ❤️ توسط ماجد یاراحمدزهی
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById("theme-icon");
+      const currentTheme = body.getAttribute("data-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      body.setAttribute("data-theme", newTheme);
+      icon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+    }
+  </script>
+</body>
+
+</html>
